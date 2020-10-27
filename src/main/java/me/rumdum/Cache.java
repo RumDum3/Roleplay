@@ -72,6 +72,7 @@ public class Cache {
         ADVERTISE_CHANNEL_ID = Long.parseLong(String.valueOf(advertise.get("channel-id")));
         ADVERTISE_COLOR = (String) advertise.get("color");
         ADVERTISE_EMOJI_URL = (String) advertise.get("emoji-url");
+        // --------------------------------------------------------------------------------
     }
 
 }
