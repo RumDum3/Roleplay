@@ -63,7 +63,7 @@ public class Twitter extends ListenerAdapter {
         twitter.setDescription(message.getContentRaw());
         twitter.setTimestamp(message.getTimeCreated());
         twitter.setImage("attachment://" + image);
-        if (!Cache.INSTAGRAM_EMOJI_URL.equals("")) {
+        if (!Cache.TWITTER_EMOJI_URL.equals("")) {
             twitter.setFooter("Twitter", Cache.TWITTER_EMOJI_URL);
         }
         return twitter;
