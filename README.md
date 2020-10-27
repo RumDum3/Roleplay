@@ -19,7 +19,7 @@ For channel id Go to your discord server, create a text channel , then right cli
 For logs id (Only for Darkchat), create a text channel , then right click, choose Copy ID and then paste it "logs-channel-id": "HERE",
 
 In order to choose the colour you need to go to the following path : Roleplay/src/main/java/me/rumdum/utils/Color.java and choose one of these colour. If you want to add a colour 
-follow the other cases and do the same. If you brake the bot just contact us an we will help you figure it out.
+follow the other cases and do the same. If you break the bot just contact us an we will help you figure it out.
 
 For emoji url, find and emoji that stands for the bot usage, copy the id and paste it "emoji-url":"HERE".
 
