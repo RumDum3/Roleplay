@@ -45,7 +45,7 @@ public class Twitter extends ListenerAdapter {
     }
 
     private EmbedBuilder getMessage(Message message) {
-        String name = message.getMember().getEffectiveName() + "#" + message.getMember().getUser().getDiscriminator()
+        String name = message.getMember().getEffectiveName() + "#" + message.getMember().getUser().getDiscriminator();
         EmbedBuilder twitter = new EmbedBuilder();
         twitter.setColor(Color.getColor(Cache.TWITTER_COLOR));
         twitter.setTitle(Cache.SERVER_NAME);
