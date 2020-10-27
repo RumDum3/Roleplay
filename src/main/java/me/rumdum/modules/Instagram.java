@@ -46,9 +46,11 @@ public class Instagram extends ListenerAdapter {
     }
 
     private EmbedBuilder getMessage(Message message) {
+        String name = message.getMember().getEffectiveName() + "#" + message.getMember().getUser().getDiscriminator();
         EmbedBuilder instagram = new EmbedBuilder();
         instagram.setColor(Color.getColor(Cache.INSTAGRAM_COLOR));
         instagram.setTitle(Cache.SERVER_NAME);
+        instagram.setAuthor("@" + name, null, message.getMember().getUser().getAvatarUrl());
         instagram.setDescription(message.getContentRaw());
         instagram.setTimestamp(message.getTimeCreated());
         if (!Cache.INSTAGRAM_EMOJI_URL.equals("")) {
@@ -58,9 +60,11 @@ public class Instagram extends ListenerAdapter {
     }
 
     private EmbedBuilder getMessage(Message message, String image) {
+        String name = message.getMember().getEffectiveName() + "#" + message.getMember().getUser().getDiscriminator();
         EmbedBuilder instagram = new EmbedBuilder();
         instagram.setColor(Color.getColor(Cache.INSTAGRAM_COLOR));
         instagram.setTitle(Cache.SERVER_NAME);
+        instagram.setAuthor("@" + name, null, message.getMember().getUser().getAvatarUrl());
         instagram.setDescription(message.getContentRaw());
         instagram.setTimestamp(message.getTimeCreated());
         instagram.setImage("attachment://" + image);
