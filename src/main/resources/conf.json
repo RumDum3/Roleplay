@@ -18,14 +18,12 @@
     "instagram": {
       "status": true,
       "channel-id": "",
-      "logs-channel-id": "",
       "color": "",
       "emoji-url": ""
     },
     "advertise": {
       "status": true,
       "channel-id": "",
-      "logs-channel-id": "",
       "color": "",
       "emoji-url": ""
     }
