@@ -45,9 +45,11 @@ public class Twitter extends ListenerAdapter {
     }
 
     private EmbedBuilder getMessage(Message message) {
+        String name = message.getMember().getEffectiveName() + "#" + message.getMember().getUser().getDiscriminator()
         EmbedBuilder twitter = new EmbedBuilder();
         twitter.setColor(Color.getColor(Cache.TWITTER_COLOR));
         twitter.setTitle(Cache.SERVER_NAME);
+        twitter.setAuthor("@" + name, null, message.getMember().getUser().getAvatarUrl());
         twitter.setDescription(message.getContentRaw());
         twitter.setTimestamp(message.getTimeCreated());
         if (!Cache.TWITTER_EMOJI_URL.equals("")) {
@@ -57,9 +59,11 @@ public class Twitter extends ListenerAdapter {
     }
 
     private EmbedBuilder getMessage(Message message, String image) {
+        String name = message.getMember().getEffectiveName() + "#" + message.getMember().getUser().getDiscriminator();
         EmbedBuilder twitter = new EmbedBuilder();
         twitter.setColor(Color.getColor(Cache.TWITTER_COLOR));
         twitter.setTitle(Cache.SERVER_NAME);
+        twitter.setAuthor("@" + name, null, message.getMember().getUser().getAvatarUrl());
         twitter.setDescription(message.getContentRaw());
         twitter.setTimestamp(message.getTimeCreated());
         twitter.setImage("attachment://" + image);
