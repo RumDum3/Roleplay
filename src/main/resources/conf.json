@@ -1,0 +1,33 @@
+{
+  "token": "",
+  "server-name": "",
+  "modules": {
+    "twitter": {
+      "status": true,
+      "channel-id": "",
+      "color": "",
+      "emoji-url": ""
+    },
+    "darknet": {
+      "status": true,
+      "channel-id": "",
+      "logs-channel-id": "",
+      "color": "",
+      "emoji-url": ""
+    },
+    "instagram": {
+      "status": true,
+      "channel-id": "",
+      "logs-channel-id": "",
+      "color": "",
+      "emoji-url": ""
+    },
+    "advertise": {
+      "status": true,
+      "channel-id": "",
+      "logs-channel-id": "",
+      "color": "",
+      "emoji-url": ""
+    }
+  }
+}
