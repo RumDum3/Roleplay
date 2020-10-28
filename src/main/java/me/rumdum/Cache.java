@@ -43,35 +43,45 @@ public class Cache {
         Reader reader = new FileReader("conf.json");
         JSONObject obj = (JSONObject) parser.parse(reader);
         // --------------------------------------------------------------------------------
-        TOKEN = (String) obj.get("token");
-        SERVER_NAME = (String) obj.get("server-name");
+        try {
+            TOKEN = (String) obj.get("token");
+            SERVER_NAME = (String) obj.get("server-name");
+        } catch (Exception exc) { System.exit(0); }
         // --------------------------------------------------------------------------------
         JSONObject modules = (JSONObject) obj.get("modules");
         // --------------------------------------------------------------------------------
-        JSONObject twitter = (JSONObject) modules.get("twitter");
-        TWITTER_STATUS = (Boolean) twitter.get("status");
-        TWITTER_CHANNEL_ID = Long.parseLong(String.valueOf(twitter.get("channel-id")));
-        TWITTER_COLOR = (String) twitter.get("color");
-        TWITTER_EMOJI_URL = (String) twitter.get("emoji-url");
+        try {
+            JSONObject twitter = (JSONObject) modules.get("twitter");
+            TWITTER_STATUS = (Boolean) twitter.get("status");
+            TWITTER_CHANNEL_ID = Long.parseLong(String.valueOf(twitter.get("channel-id")));
+            TWITTER_COLOR = (String) twitter.get("color");
+            TWITTER_EMOJI_URL = (String) twitter.get("emoji-url");
+        } catch (Exception ignored) {}
         // --------------------------------------------------------------------------------
-        JSONObject darknet = (JSONObject) modules.get("darknet");
-        DARKNET_STATUS = (Boolean) darknet.get("status");
-        DARKNET_CHANNEL_ID = Long.parseLong(String.valueOf(darknet.get("channel-id")));
-        DARKNET_LOGS_CHANNEL_ID = Long.parseLong(String.valueOf(darknet.get("logs-channel-id")));
-        DARKNET_COLOR = (String) darknet.get("color");
-        DARKNET_EMOJI_URL = (String) darknet.get("emoji-url");
+        try {
+            JSONObject darknet = (JSONObject) modules.get("darknet");
+            DARKNET_STATUS = (Boolean) darknet.get("status");
+            DARKNET_CHANNEL_ID = Long.parseLong(String.valueOf(darknet.get("channel-id")));
+            DARKNET_LOGS_CHANNEL_ID = Long.parseLong(String.valueOf(darknet.get("logs-channel-id")));
+            DARKNET_COLOR = (String) darknet.get("color");
+            DARKNET_EMOJI_URL = (String) darknet.get("emoji-url");
+        } catch (Exception ignored) {}
         // --------------------------------------------------------------------------------
-        JSONObject instagram = (JSONObject) modules.get("instagram");
-        INSTAGRAM_STATUS = (Boolean) instagram.get("status");
-        INSTAGRAM_CHANNEL_ID = Long.parseLong(String.valueOf(instagram.get("channel-id")));
-        INSTAGRAM_COLOR = (String) instagram.get("color");
-        INSTAGRAM_EMOJI_URL = (String) instagram.get("emoji-url");
+        try {
+            JSONObject instagram = (JSONObject) modules.get("instagram");
+            INSTAGRAM_STATUS = (Boolean) instagram.get("status");
+            INSTAGRAM_CHANNEL_ID = Long.parseLong(String.valueOf(instagram.get("channel-id")));
+            INSTAGRAM_COLOR = (String) instagram.get("color");
+            INSTAGRAM_EMOJI_URL = (String) instagram.get("emoji-url");
+        } catch (Exception ignored) {}
         // --------------------------------------------------------------------------------
-        JSONObject advertise = (JSONObject) modules.get("advertise");
-        ADVERTISE_STATUS = (Boolean) advertise.get("status");
-        ADVERTISE_CHANNEL_ID = Long.parseLong(String.valueOf(advertise.get("channel-id")));
-        ADVERTISE_COLOR = (String) advertise.get("color");
-        ADVERTISE_EMOJI_URL = (String) advertise.get("emoji-url");
+        try {
+            JSONObject advertise = (JSONObject) modules.get("advertise");
+            ADVERTISE_STATUS = (Boolean) advertise.get("status");
+            ADVERTISE_CHANNEL_ID = Long.parseLong(String.valueOf(advertise.get("channel-id")));
+            ADVERTISE_COLOR = (String) advertise.get("color");
+            ADVERTISE_EMOJI_URL = (String) advertise.get("emoji-url");
+        } catch (Exception ignored) {}
         // --------------------------------------------------------------------------------
     }
 
