@@ -1,4 +1,4 @@
-# Wysource Shop Open Source Bot !
+# Wysource Open Source Bot !
 
 This bot is made for FiveM servers. It includes Twitter/Instagram/Darkchat and Advertisement all in one.
 
